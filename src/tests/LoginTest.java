@@ -37,14 +37,14 @@ public class LoginTest {
 		Assert.assertEquals(lp.ReadErr(), df.specialCharErr);
 	}
 
-	//@Test(priority = 3) // without email// error message
+	@Test(priority = 3) // without email// error message
 	public void loginWithEmptyEmailId() throws InterruptedException {
 
 		lp.Login("", df.Wrongpassword);
 		Assert.assertEquals(lp.ReadErr(), df.emptyEmailErr);
 	}
 
-	//@Test(priority = 4) // without password // error msg
+	@Test(priority = 4) // without password // error msg
 	public void loginWithEmptyPassword() throws InterruptedException {
 
 		lp.Login(df.WrongEmail, "");
